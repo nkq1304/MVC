@@ -2,7 +2,7 @@
 /** database config **/
 if ($_SERVER['SERVER_NAME'] == 'localhost') {
     
-    define('DB_NAME', 'uwc2.0');
+    define('DB_NAME', 'uwc_2_0');
     define('DB_HOST', 'localhost');
     define('DB_USER', 'root');
     define('DB_PASS', '');

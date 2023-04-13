@@ -1,11 +1,8 @@
 <?php 
 class User extends Controller {
+    protected $employee;
     public function __construct() {
+        $this->employee = new Users;
+    }
 
-    }
-    public function index(){
-        //TODO
-        $data = array();
-        $this->view('user/index', $data);
-    }
 }

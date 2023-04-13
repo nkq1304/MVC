@@ -22,4 +22,12 @@ $(document).ready(function () {
 $('[data-target="#confirm-delete-modal"]').click(function() {
     var target = $(this).data('target');
     $(target).modal('show');
-  });
+});
+$('[data-target="#confirm-edit-modal"]').click(function() {
+  var target = $(this).data('target');
+  $(target).modal('show');
+});
+$('[data-target="#confirm-add-modal"]').click(function() {
+  var target = $(this).data('target');
+  $(target).modal('show');
+});

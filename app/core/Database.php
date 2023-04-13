@@ -1,6 +1,7 @@
 <?php
 
 Trait Database {
+            // Hàm kết nối CSDL
     private function connect() {
         $string = "mysql:hostname=".DB_HOST.";dbname=".DB_NAME;
         $conn = new PDO($string, DB_USER, DB_PASS);
