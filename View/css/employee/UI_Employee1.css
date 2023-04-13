@@ -1,0 +1,59 @@
+.avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .custom-file-input::-webkit-file-upload-button {
+    color: white;
+    background-color: #82a7f5;
+    border-color:  #c9d7f5;
+    border: 0;
+    border-radius: 0.25rem;
+    width: 8em;
+    font-size: 0.8rem;
+    height: 2.5em;
+}
+.custom-file-input::-webkit-file-upload-button:hover {
+    color: white;
+    background-color: #3772f1;
+    border: 0;
+    border-radius: 0.25rem;
+    width: 8em;
+    font-size: 0.8rem;
+    height: 2.5em;
+}
+form{
+    font-weight: 500;
+} 
+.card{
+   border-radius: 0px;
+}
+div > div.list-group{
+    border-radius:  0px;
+}
+div .list-group-item{
+    border: 0;
+    border-radius:0px;
+    border-bottom: 1px solid;
+    border-color:  #c9d7f5;
+    font-weight: 500;
+}
+div .list-group-item:last-child{
+    border-bottom: 0;
+}
+div .list-group-item.active{
+    background-color:  #8cb3fc;
+    border-color:   #c9d7f5;
+    color: black;
+}
+button[type="submit"]{
+    background-color: #82a7f5;
+    border-color:  #82a7f5;
+    color: white;
+    font-weight: 500;
+}
+button[type="submit"]:hover{
+    background-color: #477bec;
+    border-color:  #82a7f5;
+}
