@@ -3,7 +3,7 @@
         <div class="card p-4">
             <div class="row">
                 <div class="col-md-3">
-                    <img src="../../../View/images/avt_user.jpg" alt="avatar"
+                    <img src="<?=ROOT?>/assets/images/avt_user.jpg" alt="avatar"
                     style="width: 100%; object-fit: cover; border-radius: 50%;"
                     >
                 </div>
@@ -18,7 +18,7 @@
                     <div class="row mt-4">
                         <div class="custom-file mt-4">
                             <label class="custom-file-label" for="customFile">
-                                <h6>Change your avatar</h6>
+                                <h6>Thay đổi ảnh đại diện</h6>
                             </label><br>
                                 <input type="file" class="custom-file-input mt-2" id="customFile" name='avatar'>
                         </div>

@@ -1,9 +1,5 @@
-<?php
+<?php 
 
+require("../app/core/autoload.php");
 
-session_start(); //load only one page
-
-require "../app/core/init.php";
-
-$app = new App;
-$app->loadController();
+$app = new App();

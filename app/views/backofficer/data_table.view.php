@@ -24,11 +24,11 @@
                         <td>2023-03-01</td>
                         <td><span class="badge bg-success">Completed</span></td>
                         <td>
-                            <a href="UI_DetailsTask.php" class="ms-5">...</a>
+                            <a href="<?php require ('../backofficer/detailTask.view.php') ?>" class="ms-5">...</a>
                         </td>
                         <td>
-                            <?php require 'modal_edit_employee.php'; ?>
-                            <?php require 'modal_delete_employee.php'; ?>
+                            <?php require ('../backofficer/modal_edit_employee.view.php'); ?>
+                            <?php require ('../backofficer/modal_delete_employee.view.php'); ?>
                         </td>
                     </tr>
                     <tr>
@@ -41,8 +41,8 @@
                             <a href="UI_DetailsTask.php" class="ms-5">...</a>
                         </td>
                         <td>
-                            <?php require 'modal_edit_employee.php'; ?>
-                            <?php require 'modal_delete_employee.php'; ?>
+                            <?php require ('../backofficer/modal_edit_employee.view.php'); ?>
+                            <?php require ('../backofficer/modal_delete_employee.view.php'); ?>
                         </td>
                     </tr>   
                 </tbody>
@@ -58,7 +58,7 @@
                     </tr>
                 </tfoot>
             </table>
-            <?php require 'modal_add_employee.php'; ?>
+            <?php require ('../backofficer/modal_add_employee.view.php'); ?>
         </div>
     </div>  
 </div>

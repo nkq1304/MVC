@@ -1,26 +1,34 @@
 <?php
 
-Trait Model {
-    use Database;
-    
-    public function select($data = []) {
-        $query = "select * from $this->table";
-        if (count($data)) {
-            $query .= " where ";
-            $keys = array_keys($data);
-            foreach ($keys as $key) {
-                $query .= $key ." = :". $key . " && ";
-            }
+/**
+ * main model
+ */
+class Model extends Database
+{
+	protected $table = "users";
 
-            $query = trim($query, " && ");
-        }
-        return $this->query($query, $data);
-    }
+	function __construct()
+	{
+		// code...
+	}
 
-    public function insert($data) {
-        $keys = array_keys($data);
-        $query = "insert into $this->table (".implode(",", $keys).") values (:".implode(",:", $keys).")";
-        return $this->query($query, $data);
-    }
+
+	public function where($column,$value)
+	{
+
+		$column = addslashes($column);
+		$query = "select * from $this->table where $column = :value";
+		return $this->query($query,[
+			'value'=>$value
+		]);
+	}
+
+	public function findAll()
+	{
+
+		$query = "select * from $this->table ";
+		return $this->query($query);
+	}
+
+	
 }
-//.

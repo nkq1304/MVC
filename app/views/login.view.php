@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <!-- Style -->
-    <link rel="stylesheet" type="text/css" href="../../View/bootstrap/css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="<?=ROOT?>/assets/bootstrap/css/bootstrap.min.css" >
     <style>
         .frame_login{
             background-color: #f2f2f2c9;
@@ -78,5 +78,4 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+<?php $this->view('includes/footer')?>

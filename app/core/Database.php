@@ -1,33 +1,45 @@
 <?php
 
-Trait Database {
-            // Hàm kết nối CSDL
-    private function connect() {
-        $string = "mysql:hostname=".DB_HOST.";dbname=".DB_NAME;
-        $conn = new PDO($string, DB_USER, DB_PASS);
-        return $conn;
-    }
+/**
+ * Database connection
+ */
+class Database
+{
+	
+	private function connect()
+	{
+		// code..
+		$string = DBDRIVER . ":host=".DBHOST.";dbname=".DBNAME;
+		if(!$con = new PDO($string,DBUSER,DBPASS)){
+			die("could not connect to database");
+		}
 
-    public function query($query, $data = []) {
-        $conn = $this->connect();
-        $statement = $conn->prepare($query);
-        $check = $statement->execute($data);
-        if ($check) {
-            $result = $statement->fetchAll(PDO::FETCH_OBJ);
-            if (count($result)) return $result;
-        }
-        return false;
-    }
+		return $con;
+	}
 
-    public function get_row($query, $data = []) {
-        $conn = $this->connect();
-        $statement = $conn->prepare($query);
-        $check = $statement->execute($data);
-        if ($check) $result = $statement->fetchAll(PDO::FETCH_OBJ);
-        if (count($result)) return $result[0];
-        return false;
-    }
+	public function query($query,$data = array(),$data_type = "object")
+	{
 
-    
+		$con = $this->connect();
+		$stm = $con->prepare($query);
+
+		if($stm){
+			$check = $stm->execute($data);
+			if($check){
+				if($data_type == "object"){
+					$data = $stm->fetchAll(PDO::FETCH_OBJ);
+				}else{
+					$data = $stm->fetchAll(PDO::FETCH_ASSOC);
+				}
+
+				if(is_array($data) && count($data) >0){
+					return $data;
+				}
+			}
+		}
+
+		return false;
+	}
+
+	
 }
-//.

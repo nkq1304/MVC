@@ -1,14 +1,10 @@
 <?php
-/** database config **/
-if ($_SERVER['SERVER_NAME'] == 'localhost') {
-    
-    define('DB_NAME', 'uwc_2_0');
-    define('DB_HOST', 'localhost');
-    define('DB_USER', 'root');
-    define('DB_PASS', '');
-    
-    define('ROOT', 'http://localhost/MVC/public');
-    define('APPROOT', dirname(dirname(__FILE__)));
-    //define('VIEWSURL', 'http://localhost/UWC2.0 Project Code/app/views');
-    //definr('')
-}
+
+define('ROOT', 'http://localhost/MVC_UWC2.0_QUYNH_V1/public');
+define('ASSETS', 'http://localhost/MVC_UWC2.0_QUYNH_V1/public/assets');
+
+define('DBNAME', 'uwc_2_0');
+define('DBHOST', 'localhost');
+define('DBUSER', 'root');
+define('DBPASS', '');
+define('DBDRIVER', 'mysql');

@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UI Detail Task</title>
+    <title>Detail Task</title>
     <!-- Icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <!-- Style -->
-    <link rel="stylesheet" type="text/css" href="../../../View/bootstrap/css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="<?=ROOT?>/assets/bootstrap/css/bootstrap.min.css" >
     <link href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css' rel='stylesheet' />
     <!-- Script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -186,7 +186,7 @@
       </div>
   </div>
 
-  <script src="../../scripts/employee_table.js"></script>
+  <script src="<?=ROOT?>/assets/scripts/employee_table.js"></script>
   <script>
     $(document).ready(function () {
         $('#calendar').fullCalendar({

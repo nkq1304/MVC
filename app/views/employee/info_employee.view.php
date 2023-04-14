@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Thông tin nhân viên</title>
     <!-- Icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <!-- Style -->
-    <link rel="stylesheet" type="text/css" href="../../../View/bootstrap/css/bootstrap.min.css" >
-    <link rel="stylesheet" type="text/css" href="../../../View/css/employee/UI_Employee1.css" >
+    <link rel="stylesheet" type="text/css" href="<?=ROOT?>/assets/bootstrap/css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="<?=ROOT?>/assets/css/employee/UI_Employee1.css" >
     <!-- ======= Scripts ====== -->
     <script src="../../../View//bootstrap/js/bootstrap.min.js"></script>
     <script src="../../../View/jquery/jquery-3.6.4.js"></script>
@@ -28,9 +28,9 @@
                 <i class="fas fa-bell me-4"></i>
                 <div class="inline-block me-4">
                     <div style="font-weight: 500;">Harry Maguire</div>
-                    <div>Back Officer</div>
+                    <div>Quản lý</div>
                 </div>
-                <img src="../../../View/images/avt_user.jpg" alt="Avatar" class="avatar me-4">
+                <img src="<?=ROOT?>/assets/images/avt_user.jpg" alt="Avatar" class="avatar me-4">
                 <div>
                     <a href="../login.php" class="nav-item nav-link" style="font-weight: 500;">
                         <i class="bi bi-box-arrow-right text-dark"></i>
