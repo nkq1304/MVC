@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Đăng nhập</title>
 
     <!-- Icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
@@ -28,15 +28,15 @@
     <div class="row" style="justify-content: center;">
         <div class="col-md-6 p-5">
             <div class="frame_login">
-                    <h4 style="font-weight: 700;">LOGIN TO YOUR ACCOUNT</h4>
-                    <h6 class="mt-3 text-muted text-white" style="font-weight: 500;">Enter your details to login</h6>
+                    <h4 style="font-weight: 700;">ĐĂNG NHẬP VÀO TÀI KHOẢN CỦA BẠN</h4>
+                    <h6 class="mt-3 text-muted text-white" style="font-weight: 500;">Điền thông tin chi tiết</h6>
                     <form action="index.php?controller=user&action=login" method="post">
                         <div class="form-group mt-5">
                             <label for="phonenumber" style="font-weight: 700;">SỐ ĐIỆN THOẠI</label>
                             <div class="input-group">
                                 <input type="text" class="form-control mt-3"  name='phone'
                                         id="phonenumber" style="border-radius: 0; padding-left: 40px;" 
-                                        placeholder="Enter your phone number">
+                                        placeholder="Nhập số điện thoại">
                                 <span class="input-group-addon" 
                                         style="position: absolute; left: 15px; top: 23px;">
                                         <i class="fa fa-phone text-success"></i>
@@ -48,7 +48,7 @@
                             <div class="input-group">
                                 <input type="password" class="form-control mt-3" name='password'
                                         id="password" style="border-radius: 0; padding-left: 40px;"
-                                        placeholder="Enter your password">
+                                        placeholder="Nhập mật khẩu">
                                 <span class="input-group-addon" 
                                         style="position: absolute; left: 15px; top: 23px;">
                                         <i class="fa fa-lock text-success"></i>
@@ -60,13 +60,13 @@
                             <div class="form-check-inline mt-2">
                                 <label>
                                     <input type="radio" class="form-check-input" 
-                                    name="role" value="backofficer" required> Back Officer
+                                    name="role" value="backofficer" required> Quản lý
                                 </label>
                             </div>
                             <div class="form-check-inline">
                                 <label>
                                     <input type="radio" class="form-check-input" 
-                                    name="role" value="employee" required> Employee
+                                    name="role" value="employee" required> Nhân viên
                                 </label>
                             </div>
                         </div>
