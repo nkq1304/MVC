@@ -65,9 +65,9 @@
                       <button class="btn btn-success btn-detail" data-target="#confirm-edit-modal">Modify Task</button>
                       <button class="btn btn-success btn-detail" data-target="#confirm-delete-modal">Delete Task</button>
                       <a href="UI_DashBoard.php"><button class="btn btn-success btn-detail">Go Back</button></a>
-                      <?php require 'component/modal_add_task.php'; ?>
-                      <?php require 'component/modal_edit_task.php'; ?>
-                      <?php require 'component/modal_delete_task.php'; ?>
+                      <?php require ('../backofficer/modal_add_task.view.php') ?>
+                      <?php require ('../backofficer/modal_edit_task.view.php') ?>
+                      <?php require ('../backofficer/modal_delete_task.view.php') ?>
                   </div>
               </div>
           </div>
