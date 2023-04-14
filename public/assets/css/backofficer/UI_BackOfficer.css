@@ -1,0 +1,39 @@
+html, body{
+    height: 100%;
+}
+.content{
+    height: 100%;
+}
+.list-group{
+    border-radius: 20px;
+}
+.list-group-item{
+    margin-top: 0.5em;
+    border-radius: 20px;
+    background-color: #d9e6ff;
+    font-weight: 500;
+}
+.list-group-item:hover{
+    background-color: #6c9eff;
+}
+.list-group-item.actived{
+    background-color: #6c9eff;
+}
+
+.col1 {
+    width: 230px;
+    flex-shrink: 0;
+    height: 100%;
+}
+  
+.col2 {
+    flex-grow: 1;
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
