@@ -9,15 +9,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <!-- Style -->
-    <link rel="stylesheet" type="text/css" href="../../../View/bootstrap/css/bootstrap.min.css" >
-    <link rel="stylesheet" type="text/css" href="../../../View/css/employee/UI_Employee1.css" >
+    <link rel="stylesheet" type="text/css" href="../../../public/assets/bootstrap/css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="../../../public/assets/css/employee/UI_Employee1.css" >
     <!-- ======= Scripts ====== -->
-    <script src="../../../View//bootstrap/js/bootstrap.min.js"></script>
-    <script src="../../../View/jquery/jquery-3.6.4.js"></script>
+    <script src="../../../public/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../public/assets/jquery/jquery-3.6.4.js"></script>
 </head>
 <body style="margin: 0;">
     <!-- Topbar Start -->
-    <div class="row align-items-center d-flex p-3" style="background-color: #d9e6ff; padding-top: 0;">
+    <div class="row me-0 align-items-center d-flex p-3" style="background-color: #d9e6ff; padding-top: 0;">
         <div class="col-md-6 ps-3">
             <a href="#" style="text-decoration: none; color: black;">
                 <h1 style="margin-top: 0; margin-bottom: 0;">UWC-2.0</h1>
@@ -42,7 +42,7 @@
     </div>
     <!-- Topbar End -->
     <!-- List Tab Start -->
-    <div class="row">
+    <div class="row me-0">
         <div class="col-md-3 mt-4">
             <div class="list-group">
                 <a class="list-group-item active" href="#" data-url="component/profile_tab.php">

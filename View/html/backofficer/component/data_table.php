@@ -10,8 +10,6 @@
                         <th>ID</th>
                         <th>Staff Name</th>
                         <th>Role</th>
-                        <th>Date Assign</th>
-                        <th>Status</th>
                         <th>Detail Tasks</th>
                         <th>Action</th>
                     </tr>
@@ -21,8 +19,6 @@
                         <td>1</td>
                         <td>John Doe</td>
                         <td>Janitor</td>
-                        <td>2023-03-01</td>
-                        <td><span class="badge bg-success">Completed</span></td>
                         <td>
                             <a href="UI_DetailsTask.php" class="ms-5">...</a>
                         </td>
@@ -35,8 +31,30 @@
                         <td>2</td>
                         <td>Jane Smith</td>
                         <td>Collector</td>
-                        <td>N/A</td>
-                        <td><span class="badge bg-secondary">N/A</span></td>
+                        <td>
+                            <a href="UI_DetailsTask.php" class="ms-5">...</a>
+                        </td>
+                        <td>
+                            <?php require 'modal_edit_employee.php'; ?>
+                            <?php require 'modal_delete_employee.php'; ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>MinhLee</td>
+                        <td>Janitor</td>
+                        <td>
+                            <a href="UI_DetailsTask.php" class="ms-5">...</a>
+                        </td>
+                        <td>
+                            <?php require 'modal_edit_employee.php'; ?>
+                            <?php require 'modal_delete_employee.php'; ?>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td>4</td>
+                        <td>NguyenVanB</td>
+                        <td>Janitor</td>
                         <td>
                             <a href="UI_DetailsTask.php" class="ms-5">...</a>
                         </td>
@@ -51,8 +69,6 @@
                         <th>ID</th>
                         <th>Staff Name</th>
                         <th>Role</th>
-                        <th>Date Assign</th>
-                        <th>Status</th>
                         <th>Detail Tasks</th>
                         <th>Action</th>
                     </tr>

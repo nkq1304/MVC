@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <!-- Style -->
-    <link rel="stylesheet" type="text/css" href="../../../View/bootstrap/css/bootstrap.min.css" >
-    <link rel="stylesheet" type="text/css" href="../../../View/css/backofficer/UI_BackOfficer.css">
-    <link rel="stylesheet" type="text/css" href="../../../View/css/backofficer/Style_EmployeeTable.css">
+    <link rel="stylesheet" type="text/css" href="../../../public/assets/bootstrap/css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="../../../public/assets/css/backofficer/UI_BackOfficer.css">
+    <link rel="stylesheet" type="text/css" href="../../../public/assets/css/backofficer/Style_EmployeeTable.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
     <!-- Script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -78,6 +78,6 @@
             <!-- Main End -->
         </div>
     </div>
-    <script src="../../../View/scripts/employee_table.js"></script>
+    <script src="../../../public/assets/scripts/employee_table.js"></script>
 </body>
 </html>

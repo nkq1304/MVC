@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <!-- Style -->
-    <link rel="stylesheet" type="text/css" href="../../../View/bootstrap/css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="../../../public/assets/bootstrap/css/bootstrap.min.css" >
     <link href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css' rel='stylesheet' />
     <!-- Script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -59,15 +59,10 @@
           </div>
           <div class="col-md-6 mt-4 d-flex justify-content-end">
               <div class="row">
-                  <h5 class="text-muted">Task ID: 0001</h5>
                   <div class="col-md-12">
                       <button class="btn btn-success btn-detail" data-target="#confirm-add-modal">Add Task</button>
-                      <button class="btn btn-success btn-detail" data-target="#confirm-edit-modal">Modify Task</button>
-                      <button class="btn btn-success btn-detail" data-target="#confirm-delete-modal">Delete Task</button>
                       <a href="UI_DashBoard.php"><button class="btn btn-success btn-detail">Go Back</button></a>
                       <?php require 'component/modal_add_task.php'; ?>
-                      <?php require 'component/modal_edit_task.php'; ?>
-                      <?php require 'component/modal_delete_task.php'; ?>
                   </div>
               </div>
           </div>
@@ -98,87 +93,75 @@
                     </tbody>
                 </table> 
             </div>       
-            <h4>Vehicle info</h4>
+            <h4>List task</h4>
             <div style="margin-left: 2em;">
                 <table class="table">
                     <thead class="text-muted">
                       <tr>
                         <th>ID</th>
-                        <th>Type</th>
-                        <th>Vehicle Number</th>
-                        <th>Weight</th>
-                        <th>Capacity</th>
+                        <th>Assign Date</th>
+                        <th>State Task</th>
+                        <th>Details</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>0001</td>
-                        <td>Truck</td>
-                        <td>79-L4-XXXX</td>
-                        <td>1700</td>
-                        <td>200</td>
-                      </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2023-04-22</td>
+                            <td><span class="badge text-bg-success">Completed</span></td>
+                            <td>
+                                <button class="btn btn-sm btn-secondary" data-target="#view-task-modal">View</button>          
+                                <button class="btn btn-sm btn-primary" data-target="#confirm-edit-modal">Modify</button>
+                                <button class="btn btn-sm btn-danger" data-target="#confirm-delete-modal">Delete</button>
+                                <?php require 'component/modal_edit_task.php'; ?>
+                                <?php require 'component/modal_delete_task.php'; ?>
+                                <?php require 'component/modal_view_task.php'; ?>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2023-03-06</td>
+                            <td><span class="badge text-bg-warning">Pending</span></td>
+                            <td>
+                                <button class="btn btn-sm btn-secondary" data-target="#view-task-modal">View</button>          
+                                <button class="btn btn-sm btn-primary" data-target="#confirm-edit-modal">Modify</button>
+                                <button class="btn btn-sm btn-danger" data-target="#confirm-delete-modal">Delete</button>
+                                <?php require 'component/modal_edit_task.php'; ?>
+                                <?php require 'component/modal_delete_task.php'; ?>
+                                <?php require 'component/modal_view_task.php'; ?>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2023-04-16</td>
+                            <td><span class="badge text-bg-primary">Confirmed</span></td>
+                            <td>
+                                <button class="btn btn-sm btn-secondary" data-target="#view-task-modal">View</button>          
+                                <button class="btn btn-sm btn-primary" data-target="#confirm-edit-modal">Modify</button>
+                                <button class="btn btn-sm btn-danger" data-target="#confirm-delete-modal">Delete</button>
+                                <?php require 'component/modal_edit_task.php'; ?>
+                                <?php require 'component/modal_delete_task.php'; ?>
+                                <?php require 'component/modal_view_task.php'; ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2023-04-16</td>
+                            <td><span class="badge text-bg-danger">Cancel</span></td>
+                            <td>
+                                <button class="btn btn-sm btn-secondary" data-target="#view-task-modal">View</button>          
+                                <button class="btn btn-sm btn-primary" data-target="#confirm-edit-modal">Modify</button>
+                                <button class="btn btn-sm btn-danger" data-target="#confirm-delete-modal">Delete</button>
+                                <?php require 'component/modal_edit_task.php'; ?>
+                                <?php require 'component/modal_delete_task.php'; ?>
+                                <?php require 'component/modal_view_task.php'; ?>
+                            </td>
+                        </tr>
                     </tbody>
-                </table>
-            </div>
-            <h4>MCP info</h4>
-            <div style="margin-left: 2em;">
-                <table class="table">
-                    <thead class="text-muted">
-                      <tr>
-                        <th>ID</th>
-                        <th>MCP Name</th>
-                        <th>Capacity</th>
-                        <th>Full</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>0001</td>
-                        <td>q1</td>
-                        <td>500</td>
-                        <td>90%</td>
-                      </tr>
-                      <tr>
-                        <td>0002</td>
-                        <td>q2</td>
-                        <td>500</td>
-                        <td>90%</td>
-                      </tr>
-                      <tr>
-                        <td>0003</td>
-                        <td>q3</td>
-                        <td>500</td>
-                        <td>90%</td>
-                      </tr>
-                      <tr>
-                        <td>0004</td>
-                        <td>q4</td>
-                        <td>500</td>
-                        <td>90%</td>
-                      </tr>
-                    </tbody>
-                </table>
-            </div>
-            <h4>Other info</h4>
-            <div style="margin-left: 2em;">
-                <table class="table">
-                    <thead class="text-muted">
-                      <tr>
-                        <th>Status</th>
-                        <th>Date Assigned</th>
-                        <th>Duration</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Completed</td>
-                        <td>04/04/2023</td>
-                        <td>3 days</td>
-                      </tr>
-                    </tbody>
-                </table>
-            </div>
+                </table> 
+            </div>  
         </div>
         <div class="col-md-7">
           <div id="calendar"></div>
@@ -186,8 +169,7 @@
       </div>
   </div>
 
-  <script src="../../scripts/employee_table.js"></script>
-  <script>
+<script>
     $(document).ready(function () {
         $('#calendar').fullCalendar({
             header: {
@@ -197,9 +179,9 @@
             },
             defaultView: 'month',
             selectable: true,
-            events: [
+            events: [ 
                 {
-                    title: 'Làng ĐH',
+                    title: 'Làng ĐH, Quận 1',
                     start: '2023-04-12T10:00:00',
                     end: '2023-04-12T11:30:00',
                     color: 'purple'
@@ -218,9 +200,13 @@
                 }
             ],
             eventClick: function (event) {
-                alert('Event: ' + event.title + '\nStart: ' + moment(event.start).format('YYYY-MM-DD HH:mm') + '\nEnd: ' + moment(event.end).format('YYYY-MM-DD HH:mm'));
+                alert('List MCP: ' + event.title + '\nStart: ' + moment(event.start).format('YYYY-MM-DD HH:mm') + '\nEnd: ' + moment(event.end).format('YYYY-MM-DD HH:mm'));
             },
         });
+    });
+    $('[data-target="#view-task-modal"]').click(function() {
+        var target = $(this).data('target');
+        $(target).modal('show');
     });
   </script>
 
