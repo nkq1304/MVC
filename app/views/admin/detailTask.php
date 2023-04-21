@@ -65,9 +65,9 @@
                       <button class="btn btn-success btn-detail" data-target="#confirm-edit-modal">Chỉnh sửa </button>
                       <button class="btn btn-success btn-detail" data-target="#confirm-delete-modal">Xoá</button>
                       <a href="<?=ROOT?>/admin/"><button class="btn btn-success btn-detail">Trở lại</button></a>
-                      <?php include 'modal_add_task.view.php' ?>
-                      <?php include 'modal_edit_task.view.php' ?>
-                      <?php include 'modal_delete_task.view.php' ?>
+                      <?php include 'modal_add_task.php' ?>
+                      <?php include 'modal_edit_task.php' ?>
+                      <?php include 'modal_delete_task.php' ?>
                   </div>
               </div>
           </div>
