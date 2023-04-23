@@ -1,37 +1,51 @@
 <?php
 
-class App {
-    private $controller = 'Home';
-    private $method = 'index';
-    
-    private function splitURL() {
-        $URL = $_GET['url'] ?? 'home';
-        $URL = explode("/", trim($URL, "/"));  
-        return $URL;
-    }
-    
-    public function loadController() {
+/**
+ * main app file
+ */
+class App
+{
+	protected $controller = "home";
+	protected $method = "index";
+	protected $params = array();
 
-        $URL = $this->splitURL();
-        
-		/** select controller **/        
-        $filename = "../app/controllers/".ucfirst($URL[0]).".php";
-        if (file_exists($filename)) {
-            $this->controller = ucfirst($URL[0]);
-            unset($URL[0]);
-        } else {
-            $filename = "../app/controllers/NotFound.php";
-            $this->controller = "NotFound";
-        }
-        require $filename;
-        
-        $controller = new $this->controller;
+	public function __construct()
+	{
+		// code...
+		$URL = $this->getURL();
+		if(file_exists("../app/controllers/".$URL[0].".php"))
+		{
+			$this->controller = ucfirst($URL[0]);
+			unset($URL[0]);
+		}
 
-		/** select method **/
-        if (!empty($URL[1]) && method_exists($controller, $URL[1])) {
-            $this->method = $URL[1];
-            unset($URL[1]);
-        }
-        call_user_func_array([$controller, $this->method], $URL);
-    }
+		require "../app/controllers/".$this->controller.".php";
+		
+		// create a new App version or class
+		$this->controller = new $this->controller();
+
+		//kiem tra method co ton tai khong? xem method này có chạy được trong controller ko
+		if(isset($URL[1]))
+		{
+			if(method_exists($this->controller, $URL[1]))
+			{
+				// set method thành 1 item
+				$this->method = ucfirst($URL[1]);
+				unset($URL[1]);
+			}
+		}
+
+		// create new array cho value
+		$URL = array_values($URL);
+		$this->params = $URL;
+		
+		call_user_func_array([$this->controller,$this->method], $this->params);
+						//require function and params run
+	}
+
+	private function getURL()
+	{
+		$url = isset($_GET['url']) ? $_GET['url'] : "home";
+		return explode("/", filter_var(trim($url,"/")),FILTER_SANITIZE_URL);
+	}
 }
