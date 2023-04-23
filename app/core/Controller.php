@@ -1,6 +1,6 @@
 <?php
 
-class Controller {
+Trait Controller {
     public function view($page, $data = []) {
         if (!empty($data)) extract($data);
         $filename = "../app/views/".$page.".php";
