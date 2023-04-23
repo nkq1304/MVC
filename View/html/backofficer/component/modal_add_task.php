@@ -4,7 +4,7 @@
     <div class="modal-dialog" role="document">
     <div class="modal-content">
         <div class="modal-header">
-        <h5>Thêm công việc</h5>
+        <h5>Add Task</h5>
         </div>
         <div class="modal-body">
             <form method="POST">
@@ -50,7 +50,7 @@
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-dark" data-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-success" data-dismiss="modal">Thêm</button></a>
+            <a href="#"><button type="button" class="btn btn-success" data-dismiss="modal">Add</button></a>
         </div>
     </div>
     </div>

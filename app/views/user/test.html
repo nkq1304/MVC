@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../../public/assets/bootstrap/css/bootstrap.min.css" >
+    <script src="../../../public/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../public/assets/jquery/jquery-3.6.4.js"></script>
+<style
+>
+body {
+	background-color: #F0F2F5;
+	font-family: "Arial";
+}
+strong {
+	font-weight: 600;
+}
+.notification {
+	padding: 15px;
+	background-color: white;
+	border-radius: 16px;
+}
+
+    .notification-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 15px;
+	}
+	.notification-container {
+		display: flex;
+        align-items: flex-start;
+	}
+
+	.notification-user-avatar {
+		width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        object-fit: cover;
+	}
+
+	.notification-timer {
+		color: #1876F2;
+        font-weight: 600;
+        font-size: 14px;
+	}
+
+    .notification-status {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        width: 15px;
+        height: 15px;
+        background-color: #1876F2;
+        border-radius: 50%;
+    }
+</style>
+</head>
+<body>
+    <div class="notification">
+        <div class="notification-header">
+            <h3>New notification</h3>
+        </div>
+        <div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="" class="notification-user-avatar">
+            </div>
+            <div class="notification-content">
+                <p class="notification-text">
+                Thông báo
+                <span class="notification-timer">a few seconds ago</span>
+            </div>
+            <span class="notification-status"></span>
+        </div>
+    </div>
+</body>
+</html>
