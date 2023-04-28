@@ -27,8 +27,8 @@
             <div class="align-items-center d-flex justify-content-end">
                 <i class="fas fa-bell me-4"></i>
                 <div class="inline-block me-4">
-                    <div style="font-weight: 500;"><?=$username?></div>
-                    <div><?=$type?></div>
+                    <div style="font-weight: 500;">Minh Lee</div>
+                    <div>Collector</div>
                 </div>
                 <img src="<?=ROOT?>/assets/images/avt_user.jpg" alt="Avatar" class="avatar me-4">
                 <div>
@@ -45,7 +45,7 @@
     <div class="row">
         <div class="col-md-3 mt-4">
             <div class="list-group">
-                <a class="list-group-item active" href="<?=ROOT?>/user/profile_tab" data-url= "<?=ROOT?>/user/profile_tab">
+                <a class="list-group-item active" href="#" data-url= "<?=ROOT?>/user/profile_tab">
                 <i class="fas fa-address-card me-2"></i>Thông Tin Cá Nhân</a>
                 <a class="list-group-item" href="<?=ROOT?>/user/calendar_tab" data-url="<?=ROOT?>/user/calendar_tab">
                 <i class="bi bi-calendar3 me-2"></i>Lịch Làm Việc</a>

@@ -10,9 +10,9 @@
                 <div class="col-md-6 mt-4">
                     <div class="row mt-2">
                         <div class="col-md-12 d-flex">
-                            <h3 class="me-4"><?=$username?></h3>
+                            <h3 class="me-4">Minh Lee</h3>
                             <i class="bi bi-geo-alt mt-1 me-1"></i>
-                            <h6 class="mt-2"><?=$address?></h6>
+                            <h6 class="mt-2">Khánh Hòa</h6>
                         </div>
                     </div>
                     <div class="row mt-4">
@@ -30,34 +30,34 @@
                     <div class="row mt-3">
                         <div class="form-group col-md-6">
                             <label for="name">Tên</label>
-                            <input type="text" class="form-control mt-2" id="name" value="<?=$username?>" name='name'>
+                            <input type="text" class="form-control mt-2" id="name" value="Minh Lee" name='name'>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="address">Địa Chỉ</label>
-                            <input type="text" class="form-control mt-2" id="address" value="<?=$address?>" name='address'>
+                            <input type="text" class="form-control mt-2" id="address" value="Khánh Hòa" name='address'>
                         </div>
                     </div>
                     <div class="row mt-3">
                         <div class="form-group col-md-6">
                             <label for="phone">Số Điện Thoại</label>
-                            <input type="tel" class="form-control mt-2"id="phone" value="<?=$phone?>" name='phone'>
+                            <input type="tel" class="form-control mt-2"id="phone" value="0123456789" name='phone'>
                         </div>
                         <div class="form-group col-md-6">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control mt-2" id="email" value="<?=$email?>" name='email'>
+                        <input type="email" class="form-control mt-2" id="email" value="minh.le106@hcmut.edu.vn" name='email'>
                     </div>
                     <div class="form-group mt-3">
 
                         <label for="gender">Giới Tính</label><br>
                         <div class="form-check-inline mt-2">
                             <label>
-                                <input type="radio" class="form-check-input" name="gender" value="<?=$gender?>" checked>
+                                <input type="radio" class="form-check-input" name="gender" value="Nam" checked>
                                 <span style="font-weight: 400;">Nam</span>
                             </label>
                         </div>
                         <div class="form-check-inline">
                             <label>
-                                <input type="radio" class="form-check-input" name="gender" value="<?=$gender?>" required>
+                                <input type="radio" class="form-check-input" name="gender" value="Nữ" required>
                                 <span style="font-weight: 400;">Nữ</span>
                             </label>
                         </div>

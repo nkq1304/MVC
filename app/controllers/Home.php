@@ -7,25 +7,29 @@ class Home {
     }
 
     public function index(){  //login page
+        if (isset($_SESSION['admin'])){
+            redirect('admin/index');
+        }
 		if($_SERVER['REQUEST_METHOD'] == "POST"){
             $user = new Users;
-            $arr['phone'] = $_POST['phone'];
-            $row = $user->first($arr);
+            $row = $user->get_employee_phone($_POST['phone']);
             //check passwork
             if($row){
-                if($row->password == $_POST['password'] && $row->type != "Admin"){
-                    $_SESSION['user'] = $row;
-                    redirect('user/index');
+                if($row[0]['password'] == $_POST['password']){
+                    if ($row[0]['type'] != "Admin"){
+                        $_SESSION['user'] = $row[0];
+                        redirect('user/index');
+                    }
+                    else {
+                        $_SESSION['admin'] = $row[0];
+                        redirect('admin/index');
+                    }
                 }
-                else {
-                    $_SESSION['admin'] = $row;
-                    redirect('admin/index');
-                }
-
-
+                else echo "<script type=\"text/javascript\">alert(\"Mật khẩu không hợp lệ\");</script>";
             }
-            $user->errors['phone'] = "Số điện thoại không hợp lệ";
-            $data['errors'] = $user->errors;
+            else{
+                echo "<script type=\"text/javascript\">alert(\"Số điện thoại không hợp lệ\");</script>";
+            }
         }
         $this->view('home/index');
     }

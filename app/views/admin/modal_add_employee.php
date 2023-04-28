@@ -22,24 +22,22 @@
                         placeholder="Enter name" required>
                 </div>
             </div>
-            </div>
+        </div>
             <div class="row mt-2">
-            <div class="col-md-6">
-                <div class="form-group">
-                <label for="email" style="font-weight: 500;">EMAIL</label>
-                <input type="email" class="form-control mt-2" id="email" name="email" 
-                        placeholder="Enter email" required>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="email" style="font-weight: 500;">EMAIL</label>
+                        <input type="email" class="form-control mt-2" id="email" name="email" 
+                                placeholder="Enter email" required>
+                    </div>
                 </div>
-            </div>
-            </div>
-            <div class="row mt-2">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="phone" style="font-weight: 500;">SỐ ĐIỆN THOẠI</label>
-                    <input type="tel" class="form-control mt-2" id="phone" name="phone" 
-                        placeholder="Enter phone number" required>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="phone" style="font-weight: 500;">SỐ ĐIỆN THOẠI</label>
+                        <input type="tel" class="form-control mt-2" id="phone" name="phone" 
+                            placeholder="Enter phone number" required>
+                    </div>
                 </div>
-            </div>
         
             </div>                                          
             <div class="row mt-2">
@@ -81,11 +79,11 @@
                     </div>
                 </div>
             </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Hủy</button>
+                <button type="submit" class="btn btn-primary " name="btn_add_employee" value="1">Thêm</button></a>
+            </div>
         </form>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-dark" data-dismiss="modal">Hủy</button>
-            <button type="button" class="btn btn-primary " name="btn_add_employee" data-dismiss="modal">Thêm</button></a>
         </div>
     </div>
     </div>

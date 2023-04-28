@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th4 18, 2023 lúc 10:35 AM
--- Phiên bản máy phục vụ: 10.4.28-MariaDB
--- Phiên bản PHP: 8.2.4
+-- Host: 127.0.0.1
+-- Generation Time: Apr 24, 2023 at 02:29 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,42 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `uwc_2_0`
+-- Database: `uwc2.0`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `back officer`
---
-
-CREATE TABLE `back officer` (
-  `ID` int(11) NOT NULL,
-  `Name` varchar(100) NOT NULL,
-  `BirthDay` date NOT NULL,
-  `Address` varchar(1000) NOT NULL,
-  `Email` varchar(200) NOT NULL,
-  `Phone` varchar(20) NOT NULL,
-  `Gender` varchar(10) NOT NULL,
-  `Image` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Đang đổ dữ liệu cho bảng `back officer`
---
-
-INSERT INTO `back officer` (`ID`, `Name`, `BirthDay`, `Address`, `Email`, `Phone`, `Gender`, `Image`) VALUES
-(1, 'Trần Văn A', '1995-09-01', 'Phường Thảo Điền, quận 2, TP. Hồ Chí Minh', 'nva@gmail.com', '1237825256', 'Nam', ''),
-(2, 'Phạm Thị C', '1999-12-16', 'Phường 7, quận 3, TP. Hồ Chí Minh', 'ptc@gmail.com', '6589658959', 'Nữ', ''),
-(3, 'Lê Văn D', '1980-09-10', 'Phường Cầu Kho, quận 1, TP. Hồ Chí Minh', 'lvd@gmail.com', '5574252247', 'Nam', ''),
-(4, 'Nguyễn Thị M', '1985-04-10', 'Phường Bến Thành, quận 1, TP. Hồ Chí Minh', 'ntm@gmail.com', '5689265512', 'Nữ', ''),
-(5, 'Hồ Văn C', '1998-01-01', 'Phường 7, quận 3, TP. Hồ Chí Minh', 'hvc@gmail.com', '5353668300', 'Nam', ''),
-(6, 'Lê Văn N', '1999-06-01', 'Phường Thủ Thiêm, quận 2, TP. Hồ Chí Minh', 'lvn@gmail.com', '6455825521', 'Nam', '');
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `calender`
+-- Table structure for table `calender`
 --
 
 CREATE TABLE `calender` (
@@ -65,7 +36,7 @@ CREATE TABLE `calender` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `mcp`
+-- Table structure for table `mcp`
 --
 
 CREATE TABLE `mcp` (
@@ -77,14 +48,14 @@ CREATE TABLE `mcp` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `mcp`
+-- Dumping data for table `mcp`
 --
 
 INSERT INTO `mcp` (`ID`, `Name`, `Capacity`, `Status`, `Location`) VALUES
-(1, 'MCP1', 50, 50, '27, đường số 6, phường Linh Xuân, thành phố Thủ Đức, TP. Hồ Chí Minh'),
-(2, 'MCP 2', 600, 80, '01, đường số 6, phường Linh Xuân, TP Thủ Đức, TPHCM'),
-(3, 'MCP 3', 500, 100, '02, đường số 6, phường Linh Xuân, TP Thủ Đức, TPHCM'),
-(4, 'MCP 4', 600, 10, '03, đường số 6, phường Linh Xuân, TP Thủ Đức, TPHCM'),
+(1, 'MCP 1', 50, 50, '27, đường số 6, phường Linh Xuân, thành phố Thủ Đức, TP. Hồ Chí Minh'),
+(2, 'MCP 2', 60, 80, '01, đường số 6, phường Linh Xuân, TP Thủ Đức, TPHCM'),
+(3, 'MCP 3', 50, 100, '02, đường số 6, phường Linh Xuân, TP Thủ Đức, TPHCM'),
+(4, 'MCP 4', 60, 10, '03, đường số 6, phường Linh Xuân, TP Thủ Đức, TPHCM'),
 (5, 'MCP 6\r\n', 40, 30, '03, đường số 6, phường Linh Xuân, TP Thủ Đức, TPHCM'),
 (6, 'MCP 4', 70, 25, '04, đường số 6, phường Linh Xuân, TP Thủ Đức, TPHCM'),
 (7, 'MCP 5', 90, 20, '05, đường số 6, phường Linh Xuân, TP Thủ Đức, TPHCM');
@@ -92,7 +63,7 @@ INSERT INTO `mcp` (`ID`, `Name`, `Capacity`, `Status`, `Location`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `notification`
+-- Table structure for table `notification`
 --
 
 CREATE TABLE `notification` (
@@ -106,7 +77,7 @@ CREATE TABLE `notification` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `route`
+-- Table structure for table `route`
 --
 
 CREATE TABLE `route` (
@@ -118,7 +89,7 @@ CREATE TABLE `route` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `route`
+-- Dumping data for table `route`
 --
 
 INSERT INTO `route` (`ID`, `Begin_location`, `End_location`, `MCP_list`, `Name`) VALUES
@@ -128,24 +99,38 @@ INSERT INTO `route` (`ID`, `Begin_location`, `End_location`, `MCP_list`, `Name`)
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `task`
+-- Table structure for table `task`
 --
 
 CREATE TABLE `task` (
   `ID` int(11) NOT NULL,
   `Staff_ID` int(11) NOT NULL,
-  `MCP_ID` int(11) DEFAULT NULL,
+  `MCP_List` varchar(11) NOT NULL,
   `Status` varchar(50) NOT NULL,
   `Assign_Date` date NOT NULL,
-  `Duration` int(11) NOT NULL,
+  `Start` time(3) NOT NULL,
+  `End` time(3) DEFAULT NULL,
   `Vehicle_ID` int(11) NOT NULL,
   `Route_ID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `task`
+--
+
+INSERT INTO `task` (`ID`, `Staff_ID`, `MCP_List`, `Status`, `Assign_Date`, `Start`, `End`, `Vehicle_ID`, `Route_ID`) VALUES
+(2, 3, '1,2', 'Completed', '2023-05-22', '10:00:00.000', '12:00:00.000', 2, 1),
+(13, 3, '1,2', 'Pending', '2020-05-22', '10:00:00.000', '12:00:00.000', 5, 1),
+(20, 2, 'Giá trị 2', 'Pending', '2023-02-01', '01:00:00.000', '13:00:00.000', 1, NULL),
+(27, 3, '2,1', 'Pending', '2024-01-01', '01:00:00.000', '01:00:00.000', 3, NULL),
+(28, 3, '2,1', 'Pending', '2024-01-01', '01:00:00.000', '01:00:00.000', 3, NULL),
+(29, 3, '2,1', 'Pending', '2024-01-01', '01:00:00.000', '01:00:00.000', 3, NULL),
+(38, 3, '2,4,5', 'Pending', '2023-04-24', '01:00:00.000', '02:00:00.000', 2, NULL);
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -162,22 +147,18 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `birthday`, `address`, `email`, `phone`, `gender`, `password`, `type`) VALUES
-(4, 'Đỗ Văn H', '', '1995-04-10', 'Quận Bình Tân, TPHCM', 'dvh@gmail.com', '08080909', 'Nam', '08080909', 'Janitor'),
-(13, 'Trần Đoàn Đức Huy', '', '0000-00-00', '', 'tddh@gmail.com', '0901406434', '', '123', ''),
-(14, 'Nguyễn Văn A', '', '0000-00-00', '', 'nva@gmail.com', '123456789', '', '0000', ''),
-(15, 'Trần Thị B', '', '0000-00-00', '', 'ttb@gmail.com', '88889999', '', '88889999', ''),
-(18, 'Trần Đức B', '', '0000-00-00', 'TP Bình Dương', 'tdb@gmail.com', '1111122222', '', '1111122222', 'Collector'),
-(19, 'Quản trị viên', '', '0000-00-00', 'TP Nha Trang', 'admin@admin.com', '0102030405', '', '0102030405', 'Admin'),
-(20, 'Quản trị viên', '', '0000-00-00', 'TP Nha Trang', 'admin@admin.com', '102030405', '', '102030405', '');
+(2, 'Hoàng Provjp', '', '0000-00-00', 'TP Nha Trang', 'hoangsax123@gmail.co', '01020304051', 'male', '', 'Collector'),
+(3, 'Cong Hoang', '', '0000-00-00', 'asdasdasd', '123@cc.cc1', '1231231', 'male', '', 'Janitor'),
+(20, 'Quản trị viên', '', '0000-00-00', 'TP Nha Trang', 'admin@admin.com', '102030405', '', '102030405', 'Admin');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `vehicle`
+-- Table structure for table `vehicle`
 --
 
 CREATE TABLE `vehicle` (
@@ -190,7 +171,7 @@ CREATE TABLE `vehicle` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `vehicle`
+-- Dumping data for table `vehicle`
 --
 
 INSERT INTO `vehicle` (`ID`, `Name`, `Vehicle_Number`, `Weight`, `Capacity`, `Type`) VALUES
@@ -202,30 +183,24 @@ INSERT INTO `vehicle` (`ID`, `Name`, `Vehicle_Number`, `Weight`, `Capacity`, `Ty
 (6, 'Troller 3', '36632525', 20, 50, 'Troller');
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `back officer`
---
-ALTER TABLE `back officer`
-  ADD PRIMARY KEY (`ID`);
-
---
--- Chỉ mục cho bảng `calender`
+-- Indexes for table `calender`
 --
 ALTER TABLE `calender`
   ADD PRIMARY KEY (`ID`),
   ADD KEY `Owner_ID` (`Owner_ID`);
 
 --
--- Chỉ mục cho bảng `mcp`
+-- Indexes for table `mcp`
 --
 ALTER TABLE `mcp`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Chỉ mục cho bảng `notification`
+-- Indexes for table `notification`
 --
 ALTER TABLE `notification`
   ADD PRIMARY KEY (`ID`),
@@ -234,109 +209,101 @@ ALTER TABLE `notification`
   ADD KEY `Task_ID` (`Task_ID`);
 
 --
--- Chỉ mục cho bảng `route`
+-- Indexes for table `route`
 --
 ALTER TABLE `route`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Chỉ mục cho bảng `task`
+-- Indexes for table `task`
 --
 ALTER TABLE `task`
   ADD PRIMARY KEY (`ID`),
-  ADD KEY `MCP_ID` (`MCP_ID`),
   ADD KEY `Staff_ID` (`Staff_ID`),
   ADD KEY `Vehicle_ID` (`Vehicle_ID`),
   ADD KEY `Route_ID` (`Route_ID`);
 
 --
--- Chỉ mục cho bảng `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `vehicle`
+-- Indexes for table `vehicle`
 --
 ALTER TABLE `vehicle`
   ADD PRIMARY KEY (`ID`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `back officer`
---
-ALTER TABLE `back officer`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT cho bảng `calender`
+-- AUTO_INCREMENT for table `calender`
 --
 ALTER TABLE `calender`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `mcp`
+-- AUTO_INCREMENT for table `mcp`
 --
 ALTER TABLE `mcp`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT cho bảng `notification`
+-- AUTO_INCREMENT for table `notification`
 --
 ALTER TABLE `notification`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `route`
+-- AUTO_INCREMENT for table `route`
 --
 ALTER TABLE `route`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `task`
+-- AUTO_INCREMENT for table `task`
 --
 ALTER TABLE `task`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
--- AUTO_INCREMENT cho bảng `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
--- AUTO_INCREMENT cho bảng `vehicle`
+-- AUTO_INCREMENT for table `vehicle`
 --
 ALTER TABLE `vehicle`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `calender`
+-- Constraints for table `calender`
 --
 ALTER TABLE `calender`
-  ADD CONSTRAINT `calender_ibfk_1` FOREIGN KEY (`Owner_ID`) REFERENCES `users` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `calender_ibfk_1` FOREIGN KEY (`Owner_ID`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `notification`
+-- Constraints for table `notification`
 --
 ALTER TABLE `notification`
-  ADD CONSTRAINT `notification_ibfk_1` FOREIGN KEY (`Receiver_ID`) REFERENCES `users` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `notification_ibfk_2` FOREIGN KEY (`Sender_ID`) REFERENCES `back officer` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `notification_ibfk_1` FOREIGN KEY (`Receiver_ID`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `notification_ibfk_2` FOREIGN KEY (`Sender_ID`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `notification_ibfk_3` FOREIGN KEY (`Task_ID`) REFERENCES `task` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `task`
+-- Constraints for table `task`
 --
 ALTER TABLE `task`
-  ADD CONSTRAINT `task_ibfk_1` FOREIGN KEY (`MCP_ID`) REFERENCES `mcp` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `task_ibfk_2` FOREIGN KEY (`Staff_ID`) REFERENCES `users` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `task_ibfk_2` FOREIGN KEY (`Staff_ID`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `task_ibfk_3` FOREIGN KEY (`Vehicle_ID`) REFERENCES `vehicle` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `task_ibfk_4` FOREIGN KEY (`Route_ID`) REFERENCES `route` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;

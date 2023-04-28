@@ -7,25 +7,27 @@ class User {
     }
 
     public function index(){  //user page
-        if (isset($_SESSION["user"])) {
+        /* if (isset($_SESSION["user"])) {
             $data['username'] = empty($_SESSION['user']) ? 'user' :$_SESSION['user']->name;
             $data['type'] = empty($_SESSION['user']) ? 'user' :$_SESSION['user']->type;
-            $this->view('user/index',$data);
-        }
+           
+        } */
+        $this->view('user/index');
 
     }
     public function notify_tab(){
         $this->view('user/notify_tab');
     }
     public function profile_tab(){
-        if (isset($_SESSION["user"])) {
+        /* if (isset($_SESSION["user"])) {
             $data['username'] = empty($_SESSION['user']) ? 'user' :$_SESSION['user']->name;
             $data['address'] = empty($_SESSION['user']) ? 'user' :$_SESSION['user']->address;
             $data['phone'] = empty($_SESSION['user']) ? 'user' :$_SESSION['user']->phone;
             $data['email'] = empty($_SESSION['user']) ? 'user' :$_SESSION['user']->email;  
             $data['gender'] = empty($_SESSION['user']) ? 'user' :$_SESSION['user']->gender;  
             $this->view('user/profile_tab',$data);
-        }
+        } */
+        $this->view('user/profile_tab');
     }
     public function calendar_tab(){
         $this->view('user/calendar_tab');

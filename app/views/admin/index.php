@@ -48,15 +48,17 @@
                     <div class="align-items-center d-flex justify-content-end">
                         <i class="fas fa-bell me-4"></i>
                         <div class="inline-block me-4">
-                            <div style="font-weight: 500;"><?=$admin?></div>
+                            <div style="font-weight: 500;"><?=$_SESSION['admin']['name']?></div>
                             <div>Back Officer</div>
                         </div>
                         <img src="<?=ROOT?>/assets/images/avt_user.jpg" alt="Avatar" class="avatar me-4">
                         <div>
-                    <a href="<?=ROOT?>" class="nav-item nav-link" style="font-weight: 500;">
-                        <i class="bi bi-box-arrow-right text-dark"></i>
-                        Đăng xuất
-                    </a>
+                            <form method="POST">
+                                <button type="submit" name="logout_btn" value="1" class="nav-item nav-link" style="font-weight: 500;">
+                                    <i class="bi bi-box-arrow-right text-dark"></i>
+                                    Đăng xuất
+                                </button>
+                            </form>
                 </div>
                     </div>
                 </div>
@@ -72,7 +74,7 @@
             <hr>
             <div class="row">
                 <!-- Data Table Start -->
-                <?php include "data_table.php"; ?>
+                <?php $this->data_table(); ?>
                 <!-- Data Table End -->            
             </div>
             <!-- Main End -->
